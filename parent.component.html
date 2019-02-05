@@ -1,0 +1,10 @@
+Parent Component...........................
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input #pcomponent matInput placeholder="Parent" value="ParentValue-Click Here to Enter" (keyup)="0">
+  </mat-form-field>
+</form>
+Value of child component is: {{ CData }}
+<hr>
+Child Component...........................
+<app-child [PData]="pcomponent.value" (childEvent)="CData=$event"></app-child>
